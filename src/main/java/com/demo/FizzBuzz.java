@@ -17,32 +17,32 @@ public class FizzBuzz
 	String processNumbers (int[] numList)
 	{
          String result = "";
-        if(nums.length == 1){
-          return processNumber(nums[0]);
-        } else if (nums.length == 0){
+        if(numList.length == 1){
+          return processNumber(numList[0]);
+        } else if (numList.length == 0){
           return "";
         }
         int i;
-        for(i = 0; nums.length > i; i++){
-          if(i == nums.length - 1){
-            if (nums[i] % 15 == 0){
+        for(i = 0; numList.length > i; i++){
+          if(i == numList.length - 1){
+            if (numList[i] % 15 == 0){
               result = result + "Fizz Buzz";
-            } else if(nums[i] % 3 == 0){
+            } else if(numList[i] % 3 == 0){
               result = result + "Fizz";
-            } else if (nums[i] % 5 == 0){
+            } else if (numList[i] % 5 == 0){
               result = result + "Buzz";
             } else {
-              result = result + Integer.toString(nums[i]) + ",";
+              result = result + Integer.toString(numList[i]) + ",";
             }
           } else { 
-            if (nums[i] % 15 == 0){
+            if (numList[i] % 15 == 0){
                 result = result + "Fizz Buzz,";
-              } else if(nums[i] % 3 == 0){
+              } else if(numList[i] % 3 == 0){
                 result = result + "Fizz,";
-              } else if (nums[i] % 5 == 0){
+              } else if (numList[i] % 5 == 0){
                 result = result + "Buzz,";
               } else {
-                result = result + Integer.toString(nums[i]) + ",";
+                result = result + Integer.toString(numList[i]) + ",";
               }
           }
         }
